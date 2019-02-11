@@ -1,0 +1,22 @@
+{
+  "WebServerAddress": "127.0.0.1:8082",
+  "SessionStoreKey": "",
+  "DiscordClientID": "",
+  "DiscordClientSecret": "",
+  "DiscordBotToken": "",
+  "DiscordCallbackURL": "",
+  "DiscordAuthURL": "https://discordapp.com/api/oauth2/authorize",
+  "DiscordTokenURL": "https://discordapp.com/api/oauth2/token",
+  "DiscordAuthScopes": [
+    "identify",
+    "guilds.join",
+    "guilds"
+  ],
+  "DiscordGuildID": "",
+  "DiscordGuildRoles": [
+    ""
+  ],
+  "DiscordKickUserWithRevokedToken": true,
+  "UsersValidationEndpoint": "http://127.0.0.1:8081/api/validation/discord",
+  "PgConnString": "postgres://username:password@hostaddress/dbname?sslmode=verify-full"
+}
