@@ -109,7 +109,7 @@ func (s *Store) UpdateUser(u *discord.User) {
 	system.HandleError(err, storeName+".UpdateUser", u)
 }
 
-// SetUserInactiveByDiscordID sets `active` to false for provided uid.
+// SetUserInactiveByDiscordID sets `active` to false for provided did.
 func (s *Store) SetUserInactiveByDiscordID(did string) {
 	_, err := s.db.Exec(setUserInactiveByDiscordIDQuery, did)
 	system.HandleError(err, storeName+".SetUserInactiveByDiscordID", "did="+did)

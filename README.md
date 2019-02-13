@@ -1,7 +1,7 @@
 eve-discord-service
 ---
 
-[![CircleCI](https://circleci.com/gh/prusya/eve-discord-service.svg?style=shield)](https://circleci.com/gh/prusya/eve-ts3-service) [![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/prusya/eve-discord-service) [![Maintainability](https://api.codeclimate.com/v1/badges/7f2f285d036b7196263c/maintainability)](https://codeclimate.com/github/prusya/eve-discord-service/maintainability) [![codecov](https://codecov.io/gh/prusya/eve-ts3-service/branch/master/graph/badge.svg)](https://codecov.io/gh/prusya/eve-ts3-service) [![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/prusya/eve-discord-service/master/LICENSE)
+[![CircleCI](https://circleci.com/gh/prusya/eve-discord-service.svg?style=shield)](https://circleci.com/gh/prusya/eve-discord-service) [![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/prusya/eve-discord-service) [![Maintainability](https://api.codeclimate.com/v1/badges/7f2f285d036b7196263c/maintainability)](https://codeclimate.com/github/prusya/eve-discord-service/maintainability) [![codecov](https://codecov.io/gh/prusya/eve-discord-service/branch/master/graph/badge.svg)](https://codecov.io/gh/prusya/eve-discord-service) [![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/prusya/eve-discord-service/master/LICENSE)
 
 Service to add/del discord users to/from guilds.
 
@@ -15,8 +15,6 @@ Service to add/del discord users to/from guilds.
 `go 1.11+`
 
 `postgresql 9.2+`
-
-`ts3 server 3.0.13.8+`
 
 ## install
 
