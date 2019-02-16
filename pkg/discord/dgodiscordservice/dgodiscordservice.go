@@ -62,16 +62,18 @@ func (s *Service) Start() {
 	validateUsersT := time.NewTicker(20 * time.Minute)
 	refreshTokensT := time.NewTicker(24 * time.Hour)
 	go func() {
-		go s.RefreshTokens()
-		select {
-		case <-validateUsersT.C:
-			go s.ValidateUsers()
-		case <-refreshTokensT.C:
+		for {
 			go s.RefreshTokens()
-		case <-s.stopChan:
-			validateUsersT.Stop()
-			refreshTokensT.Stop()
-			break
+			select {
+			case <-validateUsersT.C:
+				go s.ValidateUsers()
+			case <-refreshTokensT.C:
+				go s.RefreshTokens()
+			case <-s.stopChan:
+				validateUsersT.Stop()
+				refreshTokensT.Stop()
+				break
+			}
 		}
 	}()
 }

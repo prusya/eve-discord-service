@@ -23,18 +23,18 @@ func TestNew(t *testing.T) {
 func TestStartStop(t *testing.T) {
 	sys := &system.System{
 		Config: &system.Config{
-			WebServerAddress: ":8080",
+			WebServerAddress: ":8082",
 		},
 	}
 	httpservice := New(sys)
 
 	httpservice.Start()
-	resp, err := http.Get("http://localhost:8080/api/healthcheck")
+	resp, err := http.Get("http://localhost:8082/api/healthcheck")
 	require.Nil(t, err)
 	require.Equal(t, 200, resp.StatusCode)
 	resp.Body.Close()
 
 	httpservice.Stop()
-	resp, err = http.Get("http://localhost:8080/api/healthcheck")
+	resp, err = http.Get("http://localhost:8082/api/healthcheck")
 	require.NotNil(t, err)
 }

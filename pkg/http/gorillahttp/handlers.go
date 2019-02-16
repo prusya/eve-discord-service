@@ -89,8 +89,8 @@ func recoverPanic(w http.ResponseWriter) {
 	}
 }
 
-// HealthcheckH calls respondOK.
-func HealthcheckH(w http.ResponseWriter, r *http.Request) {
+// HealthCheckH calls respondOK.
+func HealthCheckH(w http.ResponseWriter, r *http.Request) {
 	respondOK(w)
 }
 

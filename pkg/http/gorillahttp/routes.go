@@ -10,7 +10,7 @@ func (s *Service) Routes() {
 	s.router.MethodNotAllowedHandler = http.HandlerFunc(MethodNotAllowedH)
 
 	jsonAPI := s.router.PathPrefix("/api").Subrouter()
-	jsonAPI.HandleFunc("/healthcheck", HealthcheckH)
+	jsonAPI.HandleFunc("/healthcheck", HealthCheckH)
 
 	// discord service routes.
 	dv1 := jsonAPI.PathPrefix("/discord/v1").Subrouter()
